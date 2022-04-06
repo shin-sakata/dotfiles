@@ -41,9 +41,6 @@
     enable = true;
     package = pkgs.vscodium;
     userSettings = lib.trivial.importJSON ./.vscode/settings.json;
-    # https://github.com/nix-community/home-manager/blob/7cf15b19a931b99f9a918887fc488d577fd07516/modules/programs/vscode.nix#L151
-    # extensionのdirectoryをこのファイルでしかいじれなくする設定
-    mutableExtensionsDir = false;
     extensions = (with pkgs.vscode-extensions;
       [
         jnoortheen.nix-ide
