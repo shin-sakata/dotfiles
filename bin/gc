@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# 過去60日より古い世代の設定を消す
+home-manager expire-generations "-60 days"

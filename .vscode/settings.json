@@ -1,0 +1,15 @@
+{
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.cabal$",
+                "isAsync": true,
+                "cmd": "cabal-fmt -i ${file}"
+            }
+        ]
+    },
+    "haskell.manageHLS": "PATH"
+}
