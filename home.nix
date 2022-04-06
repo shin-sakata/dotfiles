@@ -40,6 +40,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
+    # このプロジェクトの ./.vscode/settings.json をグローバルなVSCodeの設定として用いる
     userSettings = lib.trivial.importJSON ./.vscode/settings.json;
     extensions = (with pkgs.vscode-extensions;
       [
