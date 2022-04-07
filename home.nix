@@ -22,6 +22,7 @@
     pkgs.git
     pkgs.direnv
     pkgs.vscodium
+    pkgs.stack
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
   ];
