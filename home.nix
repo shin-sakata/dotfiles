@@ -23,6 +23,7 @@
     pkgs.direnv
     pkgs.vscodium
     pkgs.stack
+    pkgs.zsh
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
   ];
@@ -64,5 +65,14 @@
         sha256 = "dmfOS3KIaLsMl+aO+BSBwthVIAyDJRtPLPjcVzqdKOE=";
       }
     ];
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    initExtra = ''
+      eval "$(direnv hook zsh)"
+    '';
   };
 }
