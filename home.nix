@@ -33,6 +33,9 @@
     enable = true;
     userName = "shin-sakata";
     userEmail = "shintaro.sakata.tokyo@gmail.com";
+    ignores = [
+      ".direnv"
+    ];
   };
 
   programs.direnv = {
