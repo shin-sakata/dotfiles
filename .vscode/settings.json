@@ -3,6 +3,8 @@
     "editor.formatOnSave": true,
     "workbench.iconTheme": "material-icon-theme",
     "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+    "nixEnvSelector.args.__comment": "for Hino",
+    "nixEnvSelector.args": "--arg withHLS true --arg withHoogle true",
     "emeraldwalk.runonsave": {
         "commands": [
             {
