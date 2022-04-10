@@ -1,6 +1,7 @@
 {
     "__comment": "This file is used as an immutable, global VSCode configuration through nix home-manager",
     "update.channel": "none",
+    "extensions.autoUpdate": "false",
     "editor.formatOnSave": true,
     "workbench.iconTheme": "material-icon-theme",
     "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
