@@ -25,6 +25,7 @@
     pkgs.stack
     pkgs.cabal-install
     pkgs.zsh
+    pkgs.haskell-language-server
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
   ];
