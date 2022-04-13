@@ -26,7 +26,7 @@
     pkgs.cabal-install
     pkgs.zsh
     pkgs.gnumake
-    pkgs.haskell-language-server
+    (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
   ];
