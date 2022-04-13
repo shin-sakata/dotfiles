@@ -16,5 +16,7 @@
             }
         ]
     },
-    "haskell.manageHLS": "PATH"
+    "haskell.manageHLS": "PATH",
+    "yaml.maxItemsComputed": 20000,
+    "swaggerViewer.previewInBrowser": true
 }

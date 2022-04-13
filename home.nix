@@ -60,6 +60,7 @@
         ms-ceintl.vscode-language-pack-ja
         justusadam.language-haskell
         arrterian.nix-env-selector
+        redhat.vscode-yaml # for swagger-viewer
       ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "runonsave";
@@ -72,6 +73,12 @@
         publisher = "haskell";
         version = "2.0.0";
         sha256 = "dmfOS3KIaLsMl+aO+BSBwthVIAyDJRtPLPjcVzqdKOE=";
+      }
+      {
+        name = "swagger-viewer";
+        publisher = "arjun";
+        version = "3.1.2";
+        sha256 = "ldrwo1mt4GostzRpo8d6KbegCtW5L7tFHLzg0FNiW7I=";
       }
     ];
   };
