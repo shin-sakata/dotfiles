@@ -96,4 +96,8 @@
       fi
     '';
   };
+
+  home.file = {
+    ".ghci".source = ./files/.ghci;
+  };
 }
