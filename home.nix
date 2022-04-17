@@ -19,13 +19,15 @@
   programs.home-manager.enable = true;
 
   home.packages = [
+    # utils
     pkgs.git
     pkgs.direnv
     pkgs.vscodium
-    pkgs.stack
-    pkgs.cabal-install
     pkgs.zsh
     pkgs.gnumake
+    # for Haskell
+    pkgs.stack
+    pkgs.cabal-install
     (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
