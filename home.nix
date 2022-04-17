@@ -15,9 +15,6 @@
   # changes in each release.
   home.stateVersion = "22.05";
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
   home.packages = [
     # utils
     pkgs.git
@@ -33,10 +30,7 @@
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
   ];
 
-  programs.git = import ./programs/git.nix;
-  programs.direnv = import ./programs/direnv.nix;
-  programs.vscode = import ./programs/vscode.nix { inherit pkgs lib; };
-  programs.zsh = import ./programs/zsh.nix;
+  programs = import ./programs.nix { inherit pkgs lib; };
 
   home.file = {
     ".ghci".source = ./files/.ghci;
