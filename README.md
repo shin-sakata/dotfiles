@@ -25,3 +25,27 @@ Installed nix home manager version is {version}
 ```
 $ home-manager switch
 ```
+
+### Settings
+
+下記のような設定をしたい場合がよくある
+
+```nix home.nix
+# home.nix
+{ 
+  programs.git = {
+    enabled = true;
+    # ...
+  }
+}
+```
+
+その場合は `programs/git.nix` を作り下記のように記述すると良い感じに適用されるようになっている
+
+```
+{ pkgs, lib }:
+{
+  enabled = true;
+  # ...
+}
+```
