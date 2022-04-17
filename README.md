@@ -43,6 +43,8 @@ $ home-manager switch
 その場合は `programs/git.nix` を作り下記のように記述すると良い感じに適用されるようになっている
 
 ```nix programs/git.nix
+# ./programs/git.nix
+
 { pkgs, lib }:
 {
   enabled = true;
