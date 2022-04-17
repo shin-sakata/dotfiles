@@ -33,36 +33,10 @@
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "shin-sakata";
-    userEmail = "shintaro.sakata.tokyo@gmail.com";
-    extraConfig = {
-      core.editor = "codium --wait";
-    };
-    ignores = [
-      ".direnv"
-    ];
-  };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
-
+  programs.git = import ./programs/git.nix;
+  programs.direnv = import ./programs/direnv.nix;
   programs.vscode = import ./programs/vscode.nix { inherit pkgs lib; };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableAutosuggestions = true;
-    initExtra = ''
-      # nix daemon の起動
-      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-      fi
-    '';
-  };
+  programs.zsh = import ./programs/zsh.nix;
 
   home.file = {
     ".ghci".source = ./files/.ghci;
