@@ -16,7 +16,7 @@
   home.stateVersion = "22.05";
 
   home.packages = [
-    # utils
+    # essential
     pkgs.git
     pkgs.direnv
     pkgs.vscodium
