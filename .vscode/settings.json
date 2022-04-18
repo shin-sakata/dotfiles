@@ -19,5 +19,7 @@
     "haskell.manageHLS": "PATH",
     "yaml.maxItemsComputed": 20000,
     "swaggerViewer.previewInBrowser": true,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true
 }
