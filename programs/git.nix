@@ -8,5 +8,6 @@
   };
   ignores = [
     ".direnv"
+    "*.code-workspace"
   ];
 }
