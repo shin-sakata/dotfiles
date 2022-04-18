@@ -22,6 +22,7 @@
     pkgs.vscodium
     pkgs.zsh
     pkgs.gnumake
+    pkgs.awscli
     # for Haskell
     pkgs.stack
     pkgs.cabal-install
