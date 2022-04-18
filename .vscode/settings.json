@@ -18,5 +18,6 @@
     },
     "haskell.manageHLS": "PATH",
     "yaml.maxItemsComputed": 20000,
-    "swaggerViewer.previewInBrowser": true
+    "swaggerViewer.previewInBrowser": true,
+    "redhat.telemetry.enabled": false
 }
