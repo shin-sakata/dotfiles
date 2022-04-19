@@ -10,7 +10,7 @@
       pkief.material-icon-theme
       ms-ceintl.vscode-language-pack-ja
       justusadam.language-haskell
-      arrterian.nix-env-selector
+      # arrterian.nix-env-selector
       redhat.vscode-yaml # for swagger-viewer
     ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
@@ -30,6 +30,12 @@
       publisher = "arjun";
       version = "3.1.2";
       sha256 = "ldrwo1mt4GostzRpo8d6KbegCtW5L7tFHLzg0FNiW7I=";
+    }
+    {
+      name = "direnv";
+      publisher = "mkhl";
+      version = "0.6.1";
+      sha256 = "5/Tqpn/7byl+z2ATflgKV1+rhdqj+XMEZNbGwDmGwLQ=";
     }
   ];
 }
