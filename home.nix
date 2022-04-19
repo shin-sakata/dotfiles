@@ -32,9 +32,6 @@
     (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
-    # for Scala3
-    pkgs.jdk17_headless
-    pkgs.sbt
   ];
 
   programs = import ./programs.nix { inherit pkgs lib; };
