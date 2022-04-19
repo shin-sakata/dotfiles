@@ -28,6 +28,7 @@
     pkgs.jetbrains-mono # for vscodium
     # for Haskell
     pkgs.ghc
+    pkgs.stack
     pkgs.cabal-install
     (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
