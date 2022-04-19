@@ -17,6 +17,7 @@
 
   home.packages = [
     # essential
+    pkgs.binutils
     pkgs.git
     pkgs.direnv
     pkgs.vscodium
@@ -26,7 +27,7 @@
     pkgs.saml2aws
     pkgs.jetbrains-mono # for vscodium
     # for Haskell
-    pkgs.stack
+    pkgs.ghc
     pkgs.cabal-install
     (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
