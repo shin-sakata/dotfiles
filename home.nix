@@ -26,6 +26,7 @@
     pkgs.awscli # for saml2aws
     pkgs.saml2aws
     pkgs.jetbrains-mono # for vscodium
+    pkgs.gh
     # for Haskell
     pkgs.ghc
     pkgs.stack
