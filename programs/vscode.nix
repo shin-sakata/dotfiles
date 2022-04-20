@@ -12,6 +12,7 @@
       justusadam.language-haskell
       # arrterian.nix-env-selector
       redhat.vscode-yaml # for swagger-viewer
+      scalameta.metals
     ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       name = "runonsave";
