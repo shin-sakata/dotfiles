@@ -23,7 +23,7 @@
     pkgs.vscodium
     pkgs.zsh
     pkgs.gnumake
-    pkgs.awscli # for saml2aws
+    pkgs.awscli2 # for saml2aws
     pkgs.saml2aws
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
