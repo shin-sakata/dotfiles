@@ -28,12 +28,10 @@
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
     # for Haskell
-    pkgs.ghc
-    pkgs.stack
-    pkgs.cabal-install
     (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
+    pkgs.haskellPackages.hpack
   ];
 
   programs = import ./programs.nix { inherit pkgs lib; };
