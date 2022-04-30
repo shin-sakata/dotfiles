@@ -25,5 +25,6 @@
         "**/.bloop": true,
         "**/.metals": true,
         "**/.ammonite": true
-    }
+    },
+    "nix.enableLanguageServer": true
 }
