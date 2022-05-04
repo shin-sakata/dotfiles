@@ -17,12 +17,9 @@
 
   home.packages = [
     # essential
-    pkgs.binutils
-    pkgs.git
     pkgs.direnv
     pkgs.vscodium
     pkgs.zsh
-    pkgs.gnumake
     pkgs.awscli2 # for saml2aws
     pkgs.saml2aws
     pkgs.jetbrains-mono # for vscodium
