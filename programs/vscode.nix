@@ -37,5 +37,11 @@
       version = "0.6.1";
       sha256 = "5/Tqpn/7byl+z2ATflgKV1+rhdqj+XMEZNbGwDmGwLQ=";
     }
+    {
+      name = "solidity";
+      publisher = "juanblanco";
+      version = "0.0.139";
+      sha256 = "sha256-hEC6NlEsodWuR04UTyHWOdWc6S+0wsqSWqzCSs6VaB0=";
+    }
   ];
 }
