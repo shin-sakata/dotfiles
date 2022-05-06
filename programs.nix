@@ -9,6 +9,6 @@ let
   parameters = { inherit pkgs lib; };
 
   fileNames = lib.attrsets.mapAttrsToList (name: value: lib.strings.removeSuffix ".nix" name) (builtins.readDir programsDirPath);
-  mkField = name: { name = name; value = import "${programsDirPath}/${name}.nix" parameters; };
+  mkField = name: { name = name; value = import /${programsDirPath}/${name}.nix parameters; };
 in
 builtins.listToAttrs (map mkField fileNames)
