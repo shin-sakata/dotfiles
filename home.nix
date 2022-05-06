@@ -35,6 +35,7 @@
     pkgs.rnix-lsp
     # for Ethereum
     pkgs.go-ethereum
+    pkgs.nodejs-slim-16_x
   ];
 
   programs = import ./programs.nix { inherit pkgs lib; };
