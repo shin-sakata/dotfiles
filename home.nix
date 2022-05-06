@@ -31,11 +31,8 @@
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
     pkgs.haskellPackages.hpack
-    # for NixIDE vscode extension
-    pkgs.rnix-lsp
     # for Ethereum
     pkgs.go-ethereum
-    pkgs.nodejs-slim-16_x
   ];
 
   programs = import ./programs.nix { inherit pkgs lib; };
