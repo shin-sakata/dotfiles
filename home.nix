@@ -25,6 +25,9 @@
     pkgs.saml2aws
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
+    # for JavaScript
+    pkgs.nodejs-16_x
+    pkgs.yarn
     # for Haskell
     (pkgs.haskell-language-server.override { dynamic = true; })
     pkgs.stack

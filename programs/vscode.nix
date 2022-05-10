@@ -11,6 +11,7 @@
       justusadam.language-haskell
       # arrterian.nix-env-selector
       redhat.vscode-yaml # for swagger-viewer
+      eamodio.gitlens
     ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       name = "runonsave";
