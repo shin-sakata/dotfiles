@@ -26,5 +26,7 @@
         "**/.metals": true,
         "**/.ammonite": true
     },
-    "nix.enableLanguageServer": true
+    "[yaml]": {
+        "editor.formatOnSave": false
+    }
 }
