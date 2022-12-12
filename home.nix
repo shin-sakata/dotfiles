@@ -16,13 +16,14 @@
   home.stateVersion = "22.11";
   nixpkgs.config.allowUnfree = true;
 
+  imports = [ (import <codex>).hmModule.${builtins.currentSystem} ];
+  codex.enable = true;
+
   home.packages = [
     # essential
     pkgs.direnv
     pkgs.vscodium
     pkgs.zsh
-    pkgs.awscli2 # for saml2aws
-    pkgs.saml2aws
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
     # for JavaScript
