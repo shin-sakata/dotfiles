@@ -13,7 +13,7 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "22.05";
+  home.stateVersion = "22.11";
   nixpkgs.config.allowUnfree = true;
 
   home.packages = [
@@ -35,8 +35,6 @@
     pkgs.nixpkgs-fmt # for jnoortheen.nix-ide in vscode.extensions
     pkgs.haskellPackages.cabal-fmt # for runonsave in ./.vscode/settings.json
     pkgs.haskellPackages.hpack
-    # for Ethereum
-    pkgs.go-ethereum
   ];
 
   programs = import ./programs.nix { inherit pkgs lib; };
