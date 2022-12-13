@@ -16,5 +16,9 @@
     if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
       . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
     fi
+
+    # niv で private repository を利用するのに必要
+    # https://github.com/nmattia/niv#2-use-the-netrc-file
+    export GITHUB_TOKEN=$(gh auth token)
   '';
 }
