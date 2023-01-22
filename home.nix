@@ -29,6 +29,8 @@
     pkgs.zsh
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
+    # codex 入っているので消したい
+    pkgs.saml2aws
     # for JavaScript
     pkgs.nodejs-18_x
     pkgs.yarn
