@@ -11,11 +11,4 @@
     GITHUB_TOKEN = "$(gh auth token)";
     AWS_PROFILE = "dev28685203307";
   };
-
-  initExtra = ''
-    # nix daemon の起動
-    if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-      . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-    fi
-  '';
 }
