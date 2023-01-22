@@ -16,6 +16,9 @@
   home.stateVersion = "22.11";
   nixpkgs.config.allowUnfree = true;
 
+  # https://github.com/nix-community/home-manager/issues/3342#issuecomment-1283158398
+  manual.manpages.enable = false;
+
   imports = [ (import <codex>).hmModule.${builtins.currentSystem} ];
   codex.enable = true;
 
