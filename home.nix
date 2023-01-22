@@ -30,7 +30,7 @@
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
     # for JavaScript
-    pkgs.nodejs-16_x
+    pkgs.nodejs-18_x
     pkgs.yarn
     # for Haskell
     (pkgs.haskell-language-server.override { dynamic = true; })
