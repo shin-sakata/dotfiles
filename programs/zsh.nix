@@ -9,6 +9,7 @@
     AWS_DEFAULT_REGION = "ap-northeast-1";
     AWS_PROFILE = "saml";
     NIX_PATH = "$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels\${NIX_PATH:+:$NIX_PATH}";
+    GITHUB_TOKEN = "$(gh auth token)";
   };
 
   initExtra = ''
