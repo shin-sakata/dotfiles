@@ -29,6 +29,7 @@
     pkgs.zsh
     pkgs.jetbrains-mono # for vscodium
     pkgs.gh
+    pkgs.niv
     # for JavaScript
     pkgs.nodejs-18_x
     pkgs.yarn
