@@ -2,4 +2,4 @@
 
 echo "Checking if nix home manager is installed..."
 echo "Installed nix home manager version is" $(home-manager --version)
-ln -s $(pwd)/home.nix ~/.config/nixpkgs/home.nix
+ln -s $(pwd)/home.nix ~/.config/home-manager/home.nix
