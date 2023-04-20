@@ -16,6 +16,9 @@
   home.stateVersion = "22.11";
   nixpkgs.config.allowUnfree = true;
 
+  imports = [ (import <codex>).hmModule.${builtins.currentSystem} ];
+  codex.enable = true;
+
   home.packages = [
     pkgs.direnv
     pkgs.zsh
