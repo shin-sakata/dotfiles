@@ -3,7 +3,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "shin";
-  home.homeDirectory = "/Users/shin";
+  home.homeDirectory = "/home/shin";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
