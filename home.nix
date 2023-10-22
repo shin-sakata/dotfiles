@@ -13,7 +13,7 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
   nixpkgs.config.allowUnfree = true;
 
   imports = [ (import <codex>).hmModule.${builtins.currentSystem} ];
@@ -23,7 +23,6 @@
     pkgs.direnv
     pkgs.zsh
     pkgs.jetbrains-mono # for vscode
-    pkgs.gh
     pkgs.niv
   ];
 
