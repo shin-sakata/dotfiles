@@ -7,7 +7,7 @@ flake_name=${1#"."#}
 for allowed_flake in "${ALLOWED_FLAKES[@]}"; do
   if [[ $flake_name == $allowed_flake ]]; then
 
-    nix run home-manager -- switch --flake ".#$flake_name"
+    home-manager switch --flake ".#$flake_name"
     exit 0
   fi
 done

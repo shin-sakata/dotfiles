@@ -3,8 +3,6 @@
 ## Dependencies
 
 - nix
-- nix home manager
-
 
 ## Usage
 
@@ -13,17 +11,12 @@
 ```
 $ git clone git@github.com:shin-sakata/dotfiles.git
 $ bin/init
-Checking if nix home manager is installed...
-Installed nix home manager version is {version}
 ```
-
-`ln: /Users/shin/.config/home-manager/home.nix: File exists` って出たら 拡張子を.bk(backup)とかにしてみてやってみるのはあり。
-後々いい感じの構成に修正したい。
 
 ### Apply
 
 ```
-$ home-manager switch
+$ ./bin/switch {configurationName}
 ```
 
 ### Settings
@@ -32,7 +25,7 @@ $ home-manager switch
 
 ```nix home.nix
 # home.nix
-{ 
+{
   programs.git = {
     enabled = true;
     # ...

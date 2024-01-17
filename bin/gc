@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # current generation 以外の世代を全て消す
-nix run home-manager/master -- expire-generations now
+home-manager expire-generations now

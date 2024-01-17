@@ -1,5 +1,3 @@
 #!/bin/sh
 
-echo "Checking if nix home manager is installed..."
-echo "Installed nix home manager version is" $(nix run home-manager/master -- --version)
 ln -s $(pwd)/flake.nix ~/.config/home-manager/flake.nix
