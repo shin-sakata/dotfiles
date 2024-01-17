@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ALLOWED_FLAKES=("herp" "shin")
+flake_name=${1#"."#}
+
+# フレーク名が許可リストに含まれているかチェック
+for allowed_flake in "${ALLOWED_FLAKES[@]}"; do
+  if [[ $flake_name == $allowed_flake ]]; then
+
+    nix run home-manager -- switch --flake ".#$flake_name"
+    exit 0
+  fi
+done
+
+# 許可されていないフレークの場合、エラーメッセージを表示
+echo "Error: '$flake_name' is not a permitted flake."
+echo "Allowed flakes are: ${ALLOWED_FLAKES[*]}"
+exit 1

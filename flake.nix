@@ -16,15 +16,25 @@
       system = "x86_64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations."shin" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      homeConfigurations = {
+        herp = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
 
-        modules = [
-          ./home.nix
-          codex.hmModule.${system}({...}: {
-            codex.enable = true;
-          })
-        ];
+          modules = [
+            ./home.nix
+            codex.hmModule.${system}({...}: {
+              codex.enable = true;
+            })
+          ];
+        };
+
+        shin = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          modules = [
+            ./home.nix
+          ];
+        };
       };
     };
 }
