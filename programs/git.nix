@@ -9,5 +9,6 @@
   ignores = [
     ".direnv"
     "*.code-workspace"
+    ".ctx"
   ];
 }
