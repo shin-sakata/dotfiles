@@ -1,7 +1,4 @@
-{ config, pkgs, lib, ... }:
-let
-  createCtx = pkgs.writeShellScriptBin "ctx" (builtins.readFile ./bin/createCtx.sh);
-in {
+{ config, pkgs, lib, ... }: {
   home.username = "shin";
   home.homeDirectory = "/Users/shin";
 
@@ -14,8 +11,7 @@ in {
     pkgs.jetbrains-mono # for vscode
     pkgs.niv
     pkgs.cachix
-    createCtx
-  ];
+  ] ++ (import ./bin.nix { inherit pkgs; });
 
   programs = import ./programs.nix { inherit pkgs lib; };
 
