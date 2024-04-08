@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  createCtx = pkgs.writeShellScriptBin "ctx" (builtins.readFile ./createCtx.sh);
+  createCtx = pkgs.writeShellScriptBin "ctx" (builtins.readFile ./bin/createCtx.sh);
 in {
   home.username = "shin";
   home.homeDirectory = "/Users/shin";

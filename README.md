@@ -10,13 +10,13 @@
 
 ```
 $ git clone git@github.com:shin-sakata/dotfiles.git
-$ bin/init
+$ ./utils/init
 ```
 
 ### Apply
 
 ```
-$ ./bin/switch {configurationName}
+$ ./utils/switch {configurationName}
 ```
 
 ### Settings
