@@ -5,7 +5,7 @@ export GITHUB_TOKEN=$(gh auth token)
 print_directory_structure() {
     local dir=$1
     local prefix=$2
-    shopt -s nullglob # 空のglobを無視する設定
+    setopt nullglob # 空のglobを無視する設定
 
     # ディレクトリ自体を出力（ルートディレクトリの場合は除く）
     if [ "$dir" != "." ]; then
@@ -13,7 +13,7 @@ print_directory_structure() {
     fi
 
     # ディレクトリ内の各エントリに対して
-    for entry in "$dir"/* "$dir"/.[!.]* "$dir"/..?*; do
+    for entry in "$dir"/* "$dir"/.[!.]*(D) "$dir"/..?*(D); do
         if [[ $entry == "$dir/." || $entry == "$dir/.." || $entry == "$dir/.git" ]]; then
             continue # 特定のドットファイル/ディレクトリを無視
         fi
