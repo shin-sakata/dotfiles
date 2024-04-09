@@ -1,6 +1,6 @@
-#!/bin/bash
-
-include_dotfiles=0
+# niv で private repository を利用するのに必要
+# https://github.com/nmattia/niv#2-use-the-netrc-file
+export GITHUB_TOKEN=$(gh auth token)
 
 print_directory_structure() {
     local dir=$1
@@ -42,16 +42,18 @@ print_file_contents() {
     done
 }
 
-if [ -z "$1" ]; then
-    echo "Usage: $0 <directory>"
-    exit 1
-fi
+ctx() {
+    if [ -z "$1" ]; then
+        echo "Usage: $0 <directory>"
+        return 1
+    fi
 
-target_dir="$1"
+    target_dir="$1"
 
-echo "# ディレクトリ構造" >> .ctx
-print_directory_structure "$target_dir" "/" >> .ctx
-echo >> .ctx
+    echo "# ディレクトリ構造" > .ctx
+    print_directory_structure "$target_dir" "/" >> .ctx
+    echo >> .ctx
 
-echo "# ファイル内容" >> .ctx
-print_file_contents "$target_dir" >> .ctx
+    echo "# ファイル内容" >> .ctx
+    print_file_contents "$target_dir" >> .ctx
+}
