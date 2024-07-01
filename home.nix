@@ -11,6 +11,7 @@
     pkgs.jetbrains-mono # for vscode
     pkgs.niv
     pkgs.cachix
+    pkgs.kustomize
   ];
 
   programs = import ./programs.nix { inherit pkgs lib; };
