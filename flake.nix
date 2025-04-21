@@ -4,7 +4,7 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    codex.url = "github:herp-inc/codex";
+    codex.url = "github:herp-inc-hq/codex";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
