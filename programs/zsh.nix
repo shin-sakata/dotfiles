@@ -2,7 +2,7 @@
 {
   enable = true;
   enableCompletion = true;
-  enableAutosuggestions = true;
+  autosuggestion.enable = true;
 
   initExtra = builtins.readFile ../zsh/initExtra.zsh;
 }
