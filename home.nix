@@ -16,6 +16,7 @@
     pkgs.nodejs-slim_20.pkgs.pnpm
     pkgs.android-tools
     pkgs.scrcpy
+    pkgs.claude-code
   ];
 
   programs = import ./programs.nix { inherit pkgs lib profileName; };
