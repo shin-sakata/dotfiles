@@ -4,5 +4,5 @@
   enableCompletion = true;
   autosuggestion.enable = true;
 
-  initExtra = builtins.readFile ../zsh/initExtra.zsh;
+  initContent = builtins.readFile ../zsh/initContent.zsh;
 }

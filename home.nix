@@ -12,11 +12,11 @@
     pkgs.niv
     pkgs.cachix
     pkgs.kustomize
-    pkgs.nodejs-slim_20
-    pkgs.nodejs-slim_20.pkgs.pnpm
-    pkgs.android-tools
-    pkgs.scrcpy
-    pkgs.claude-code
+    pkgs.nodejs_20
+    pkgs.nodejs_20.pkgs.pnpm
+    # pkgs.android-tools
+    # pkgs.scrcpy
+    # pkgs.claude-code
   ];
 
   programs = import ./programs.nix { inherit pkgs lib profileName; };
