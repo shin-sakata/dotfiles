@@ -14,6 +14,8 @@
     pkgs.kustomize
     pkgs.nodejs-slim_20
     pkgs.nodejs-slim_20.pkgs.pnpm
+    pkgs.android-tools
+    pkgs.scrcpy
   ];
 
   programs = import ./programs.nix { inherit pkgs lib profileName; };
