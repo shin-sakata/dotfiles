@@ -24,8 +24,12 @@
             ({ ... }: {
               _module.args.profileName = "herp";
             })
+            ({ ... }: {
+              nixpkgs.overlays = [ codex.overlays.default ];
+            })
             ./home.nix
-            codex.hmModule.${system}({...}: {
+            codex.homeModules.default
+            ({ ... }: {
               codex.enable = true;
             })
           ];

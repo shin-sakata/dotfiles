@@ -1,17 +1,27 @@
-{ lib, profileName, ... }:
-let
-  isHerpProfile = profileName == "herp";
-in
+{ ... }:
 {
-  enable = true;
-  userName = if isHerpProfile then "shin-sakata_herpinc" else "shin-sakata";
-  userEmail = if isHerpProfile then "shintaro.sakata@herp.co.jp" else "shintaro.sakata.tokyo@gmail.com";
-  extraConfig = {
-    core.editor = "cursor --wait";
+  programs.git = {
+    enable = true;
+    extraConfig = {
+      core.editor = "cursor --wait";
+      include.path = "~/.gitconfig-default";
+      includeIf."gitdir:/Users/shin/Projects/herp-inc/".path = "~/.gitconfig-herpinc";
+    };
+    ignores = [
+      ".direnv"
+      "*.code-workspace"
+      ".ctx"
+    ];
   };
-  ignores = [
-    ".direnv"
-    "*.code-workspace"
-    ".ctx"
-  ];
+
+  home.file.".gitconfig-herpinc".text = ''
+    [user]
+      name = shin-sakata_herpinc
+      email = shintaro.sakata@herp.co.jp
+  '';
+  home.file.".gitconfig-default".text = ''
+    [user]
+      name = shin-sakata
+      email = shintaro.sakata.tokyo@gmail.com
+  '';
 }

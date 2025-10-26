@@ -1,4 +1,4 @@
-{ config, pkgs, lib, profileName, ... }: {
+{ config, pkgs, lib, ... }: {
   home.username = "shin";
   home.homeDirectory = "/Users/shin";
 
@@ -14,12 +14,14 @@
     pkgs.kustomize
     pkgs.nodejs_24
     pkgs.nodejs_24.pkgs.pnpm
-    # pkgs.android-tools
-    # pkgs.scrcpy
-    # pkgs.claude-code
+    pkgs.podman
+    pkgs.podman-compose
   ];
 
-  programs = import ./programs.nix { inherit pkgs lib profileName; };
-
-  home.file = {};
+  imports = [
+    ./programs/git.nix
+    ./programs/direnv.nix
+    ./programs/zsh.nix
+    ./programs/home-manager.nix
+  ];
 }
