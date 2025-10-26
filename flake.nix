@@ -21,6 +21,9 @@
           inherit pkgs;
 
           modules = [
+            ({ ... }: {
+              _module.args.profileName = "herp";
+            })
             ./home.nix
             codex.hmModule.${system}({...}: {
               codex.enable = true;
@@ -32,6 +35,9 @@
           inherit pkgs;
 
           modules = [
+            ({ ... }: {
+              _module.args.profileName = "shin";
+            })
             ./home.nix
           ];
         };

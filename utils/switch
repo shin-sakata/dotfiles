@@ -6,7 +6,6 @@ flake_name=${1#"."#}
 # フレーク名が許可リストに含まれているかチェック
 for allowed_flake in "${ALLOWED_FLAKES[@]}"; do
   if [[ $flake_name == $allowed_flake ]]; then
-
     home-manager switch --flake ".#$flake_name"
     exit 0
   fi

@@ -1,10 +1,13 @@
-{ ... }:
+{ lib, profileName, ... }:
+let
+  isHerpProfile = profileName == "herp";
+in
 {
   enable = true;
-  userName = "shin-sakata";
-  userEmail = "shintaro.sakata.tokyo@gmail.com";
+  userName = if isHerpProfile then "shin-sakata_herpinc" else "shin-sakata";
+  userEmail = if isHerpProfile then "shintaro.sakata@herp.co.jp" else "shintaro.sakata.tokyo@gmail.com";
   extraConfig = {
-    core.editor = "code --wait";
+    core.editor = "cursor --wait";
   };
   ignores = [
     ".direnv"

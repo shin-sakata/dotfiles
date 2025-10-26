@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, profileName, ... }: {
   home.username = "shin";
   home.homeDirectory = "/Users/shin";
 
@@ -12,9 +12,11 @@
     pkgs.niv
     pkgs.cachix
     pkgs.kustomize
+    pkgs.nodejs-slim_20
+    pkgs.nodejs-slim_20.pkgs.pnpm
   ];
 
-  programs = import ./programs.nix { inherit pkgs lib; };
+  programs = import ./programs.nix { inherit pkgs lib profileName; };
 
   home.file = {};
 }
