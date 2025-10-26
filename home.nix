@@ -12,8 +12,8 @@
     pkgs.niv
     pkgs.cachix
     pkgs.kustomize
-    pkgs.nodejs_20
-    pkgs.nodejs_20.pkgs.pnpm
+    pkgs.nodejs_24
+    pkgs.nodejs_24.pkgs.pnpm
     # pkgs.android-tools
     # pkgs.scrcpy
     # pkgs.claude-code
