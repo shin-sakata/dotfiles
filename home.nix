@@ -16,6 +16,7 @@
     pkgs.nodejs_24.pkgs.pnpm
     pkgs.podman
     pkgs.podman-compose
+    (pkgs.writeShellScriptBin "docker" ''exec podman "$@"'')
   ];
 
   imports = [
