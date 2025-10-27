@@ -24,6 +24,7 @@
     ./programs/direnv.nix
     ./programs/zsh.nix
     ./programs/home-manager.nix
+    ./programs/podman-machine.nix
   ];
 
   home.file.".ssh/config".text = ''
