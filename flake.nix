@@ -38,10 +38,12 @@
           inherit pkgs;
 
           modules = [
-            ({ ... }: {
+            {
               _module.args.profileName = "shin";
-            })
-            ./home.nix
+              imports = [
+                ./home.nix
+              ];
+            }
           ];
         };
       };
