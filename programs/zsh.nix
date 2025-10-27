@@ -4,6 +4,7 @@
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
-    initContent = builtins.readFile ../zsh/initContent.zsh;
+    syntaxHighlighting.enable = true;
+    initExtra = ''eval "$(codex configure zsh)"'';
   };
 }
