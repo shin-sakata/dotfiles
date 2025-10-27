@@ -18,9 +18,6 @@
     [user]
       name = shin-sakata_herpinc
       email = shintaro.sakata@herp.co.jp
-    [credential]
-      useHttpPath = true
-      username = shin-sakata_herpinc
   '';
   home.file.".gitconfig-default".text = ''
     [user]
