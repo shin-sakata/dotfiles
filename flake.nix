@@ -21,17 +21,16 @@
           inherit pkgs;
 
           modules = [
-            ({ ... }: {
+            {
               _module.args.profileName = "herp";
-            })
-            ({ ... }: {
               nixpkgs.overlays = [ codex.overlays.default ];
-            })
-            ./home.nix
-            codex.homeModules.default
-            ({ ... }: {
               codex.enable = true;
-            })
+
+              imports = [
+                ./home.nix
+                codex.homeModules.default
+              ];
+            }
           ];
         };
 
