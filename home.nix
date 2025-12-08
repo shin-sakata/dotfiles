@@ -14,6 +14,7 @@
     pkgs.kustomize
     pkgs.nodejs_24
     pkgs.nodejs_24.pkgs.pnpm
+    pkgs.nodejs_24.pkgs.yarn
     pkgs.podman
     pkgs.podman-compose
     (pkgs.writeShellScriptBin "docker" ''exec podman "$@"'')
@@ -27,8 +28,10 @@
     ./programs/podman-machine.nix
   ];
 
-  home.file.".ssh/config".text = ''
-    Host *
-      IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-  '';
+  home.file = {
+    ".ssh/config".text = ''
+      Host *
+        IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+    '';
+  };
 }

@@ -5,6 +5,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initExtra = ''eval "$(codex configure zsh)"'';
+    initContent = ''
+      eval "$(codex configure zsh)"
+      eval "$(direnv hook zsh)"
+    '';
   };
 }
