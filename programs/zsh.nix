@@ -7,7 +7,6 @@
     syntaxHighlighting.enable = true;
     initContent = ''
       eval "$(codex configure zsh)"
-      eval "$(direnv hook zsh)"
     '';
   };
 }
