@@ -2,7 +2,7 @@
 {
   programs.git = {
     enable = true;
-    extraConfig = {
+    settings = {
       core.editor = "cursor --wait";
       include.path = "~/.gitconfig-default";
       includeIf."gitdir:/Users/shin/Projects/herp-inc/".path = "~/.gitconfig-herpinc";

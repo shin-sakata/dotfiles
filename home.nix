@@ -23,7 +23,7 @@
     pkgs.podman
     pkgs.podman-compose
     (pkgs.writeShellScriptBin "docker" ''exec podman "$@"'')
-    (import ./pkgs/moonbit-wasm-toolchain.nix { inherit pkgs; })
+    (import ./pkgs/moonbit-toolchain.nix { inherit pkgs; })
   ];
 
   imports = [
