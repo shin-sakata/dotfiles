@@ -2,8 +2,13 @@
   home.username = "shin";
   home.homeDirectory = "/Users/shin";
 
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   nixpkgs.config.allowUnfree = true;
+
+  # 25.11 から macOS では `targets.darwin.copyApps` がデフォルト有効になり、
+  # `~/Applications/Home Manager Apps` へ rsync でコピーします。
+  # 環境によっては権限/ACL で失敗するため明示的に無効化します。
+  targets.darwin.copyApps.enable = false;
 
   home.packages = [
     pkgs.direnv
@@ -18,6 +23,7 @@
     pkgs.podman
     pkgs.podman-compose
     (pkgs.writeShellScriptBin "docker" ''exec podman "$@"'')
+    (import ./pkgs/moonbit-wasm-toolchain.nix { inherit pkgs; })
   ];
 
   imports = [
